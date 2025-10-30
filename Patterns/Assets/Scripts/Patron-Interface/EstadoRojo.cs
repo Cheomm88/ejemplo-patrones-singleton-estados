@@ -14,7 +14,7 @@ public class EstadoRojo : IEstado
 
     public void Entrar(SemaforoStateMachine semaforo)
     {
-        Debug.Log("Enciende luz roja");
+        Debug.Log("Entra a semaforo en rojo");
         semaforo.luzRoja.SetActive(true);
         timer = 0.0f;
     }

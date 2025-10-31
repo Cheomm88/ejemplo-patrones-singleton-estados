@@ -1,8 +1,13 @@
 using System.Threading;
+using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Localization.Settings;
 
 public class SemaforoConEnum : MonoBehaviour
 {
+    [SerializeField]
+    TextMeshProUGUI textoSemaforo;
     //Declarando los diferentes estados de mi semáforo.
     public enum EstadoEnumSemaforo
     {
@@ -54,7 +59,7 @@ public class SemaforoConEnum : MonoBehaviour
     //Funciones de cada estado.
     void SemaforoEnRojo()
     {
-        
+        textoSemaforo.text = LocalizationSettings.StringDatabase.GetLocalizedString("UI", "_red"); 
         luzRoja.SetActive(true);
         luzVerde.SetActive(false);
         luzAmarilla.SetActive(false);
@@ -68,6 +73,7 @@ public class SemaforoConEnum : MonoBehaviour
 
     void SemaforoEnVerde()
     {
+        textoSemaforo.text = LocalizationSettings.StringDatabase.GetLocalizedString("UI", "_green");
         if (timer < 15f)
         {
             luzRoja.SetActive(false);
@@ -83,6 +89,8 @@ public class SemaforoConEnum : MonoBehaviour
 
     void SemaforoEnAmarillo()
     {
+        string desc = LocalizationSettings.StringDatabase.GetLocalizedString("UI", "_orange");
+        textoSemaforo.text = desc;
         if (timer < 2f)
         {
             luzRoja.SetActive(false);

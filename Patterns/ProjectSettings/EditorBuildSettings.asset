@@ -9,5 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/PlantillaSemaforo.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: b3eba576ae260ec428fdd4bf3efd1023, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.localization.settings: {fileID: 11400000, guid: 21d1e888d1e848040bab7e78852293d7, type: 2}
   m_UseUCBPForAssetBundles: 0
